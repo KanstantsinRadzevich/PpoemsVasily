@@ -1,0 +1,9 @@
+.App-content {
+	display:flex;
+	height: 80vh;
+	width: 100vw;
+	background-color: rgb(66, 66, 195);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
