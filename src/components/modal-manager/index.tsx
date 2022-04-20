@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import modalConfig from "./modalConfig.js";
+//import modalConfig from "./modalConfig.js";
 //These two containers are siblings in the DOM
 interface ModalProps {
   children: React.ReactNode;
@@ -12,8 +12,8 @@ interface ModalState {
 }
 //Let's create a Modal component that is an abstraction around
 //the portal API.
-const modalRoot: HTMLElement | null = document.getElementById("modal-root");
-const appRoot: HTMLElement | null = document.getElementById("root");
+const modalRoot = document.getElementById("modal-root");
+//const appRoot: HTMLElement | null = document.getElementById("root");
 class Modal extends React.Component<ModalProps, ModalState> {
   el: HTMLDivElement;
   constructor(props: ModalProps) {
@@ -28,12 +28,12 @@ class Modal extends React.Component<ModalProps, ModalState> {
   componentDidMount() {
     // Append the element into the DOM on mount. We'll render
     // into the modal container element (see the HTML tab).
-    modalRoot.appendChild(this.el);
+    modalRoot?.appendChild(this.el);
   }
 
   componentWillUnmount() {
     // Remove the element from the DOM when we unmount
-    modalRoot.removeChild(this.el);
+    modalRoot?.removeChild(this.el);
   }
 
   render() {
