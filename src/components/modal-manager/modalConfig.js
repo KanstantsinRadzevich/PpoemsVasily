@@ -1,8 +1,8 @@
 const modalConfig = {
 	// Modal config
-	header: true,
-	body: true,
-	footer: true
+	header: "header",
+	main: "main",
+	footer: "footer"
 }
 
 export default modalConfig;
